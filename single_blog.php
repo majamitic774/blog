@@ -3,9 +3,12 @@ session_start();
 
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
-require_once 'core/blog.php';
-require_once 'core/comment.php';
-require_once 'core/user.php';
+
+
+require_once 'core/autoload.php';
+// require_once 'core/blog.php';
+// require_once 'core/comment.php';
+// require_once 'core/user.php';
 
 
 $blog = new Blog();
