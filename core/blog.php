@@ -1,5 +1,5 @@
 <?php
-require_once 'database.php';
+require_once 'core/autoload.php';
 
 class Blog
 {

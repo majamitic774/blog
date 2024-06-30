@@ -1,5 +1,5 @@
 <?php
-require_once 'core/user.php';
+require_once 'core/autoload.php';
 
 $message = '';
 

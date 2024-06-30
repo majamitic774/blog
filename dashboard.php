@@ -1,7 +1,6 @@
 <?php
 session_start();
-require_once 'core/blog.php';
-require_once 'core/user.php';
+require_once 'core/autoload.php';
 
 if (!isset($_SESSION['user_id'])) {
     header("Location: login.php");
