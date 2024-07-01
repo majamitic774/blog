@@ -1,23 +1,17 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-    <title>Login</title>
-    <link rel="stylesheet" type="text/css" href="css/styles.css">
-</head>
-
-<body>
-    <h1>Login</h1>
-    <?php if ($message) : ?>
-        <p><?php echo $message; ?></p>
-    <?php endif; ?>
-    <form action="login.php" method="post">
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username"><br><br>
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password"><br><br>
-        <input type="submit" value="Login">
-    </form>
-</body>
-
-</html>
+<?php include 'includes/header.php'; ?>
+<h1 class="mb-4">Login</h1>
+<?php if ($message) : ?>
+    <div class="alert alert-danger"><?php echo $message; ?></div>
+<?php endif; ?>
+<form action="login.php" method="post">
+    <div class="mb-3">
+        <label for="username" class="form-label">Username:</label>
+        <input type="text" class="form-control" id="username" name="username" required>
+    </div>
+    <div class="mb-3">
+        <label for="password" class="form-label">Password:</label>
+        <input type="password" class="form-control" id="password" name="password" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Login</button>
+</form>
+<?php include 'includes/footer.php'; ?>

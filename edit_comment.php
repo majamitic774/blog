@@ -8,6 +8,7 @@ redirectIfNotSet('id', 'index.php');
 
 $comment = new Comment();
 
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $commentId = $_POST['comment_id'];
     $content = $_POST['content'];

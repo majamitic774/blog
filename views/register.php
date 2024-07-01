@@ -1,25 +1,21 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-    <title>Register</title>
-    <link rel="stylesheet" type="text/css" href="css/styles.css">
-</head>
-
-<body>
-    <h1>Register</h1>
-    <?php if ($message) : ?>
-        <p><?php echo $message; ?></p>
-    <?php endif; ?>
-    <form action="register.php" method="post">
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required><br><br>
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required><br><br>
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required><br><br>
-        <input type="submit" value="Register">
-    </form>
-</body>
-
-</html>
+<?php include 'includes/header.php'; ?>
+<h1 class="mb-4">Register</h1>
+<?php if ($message) : ?>
+    <div class="alert alert-info"><?php echo $message; ?></div>
+<?php endif; ?>
+<form action="register.php" method="post">
+    <div class="mb-3">
+        <label for="username" class="form-label">Username:</label>
+        <input type="text" class="form-control" id="username" name="username" required>
+    </div>
+    <div class="mb-3">
+        <label for="password" class="form-label">Password:</label>
+        <input type="password" class="form-control" id="password" name="password" required>
+    </div>
+    <div class="mb-3">
+        <label for="email" class="form-label">Email:</label>
+        <input type="email" class="form-control" id="email" name="email" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Register</button>
+</form>
+<?php include 'includes/footer.php'; ?>

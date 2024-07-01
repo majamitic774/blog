@@ -10,7 +10,7 @@ $blogs = $blog->getAllBlogs();
 
 $template = new Template('views/index.php');
 $template->set('blogs', $blogs);
-$template->set('username', $_SESSION['username']);
+$template->set('username', $_SESSION['username'] ?? "");
 echo $template->render();
 ?>
 

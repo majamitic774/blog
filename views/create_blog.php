@@ -1,23 +1,17 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-    <title>Create Blog Post</title>
-    <link rel="stylesheet" type="text/css" href="css/styles.css">
-</head>
-
-<body>
-    <h1>Create Blog Post</h1>
-    <?php if ($message) : ?>
-        <p><?php echo $message; ?></p>
-    <?php endif; ?>
-    <form action="create_blog.php" method="post">
-        <label for="title">Title:</label>
-        <input type="text" id="title" name="title" required><br><br>
-        <label for="content">Content:</label>
-        <textarea id="content" name="content" required></textarea><br><br>
-        <input type="submit" value="Create Post">
-    </form>
-</body>
-
-</html>
+<?php include 'includes/header.php'; ?>
+<h1 class="mb-4">Create Blog Post</h1>
+<?php if ($message) : ?>
+    <div class="alert alert-info"><?php echo $message; ?></div>
+<?php endif; ?>
+<form action="create_blog.php" method="post">
+    <div class="mb-3">
+        <label for="title" class="form-label">Title:</label>
+        <input type="text" class="form-control" id="title" name="title" required>
+    </div>
+    <div class="mb-3">
+        <label for="content" class="form-label">Content:</label>
+        <textarea class="form-control" id="content" name="content" rows="5" required></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Create Post</button>
+</form>
+<?php include 'includes/footer.php'; ?>

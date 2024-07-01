@@ -1,42 +1,38 @@
-<!DOCTYPE html>
-<html>
+<?php include 'includes/header.php'; ?>
+<h1 class="mb-4">Dashboard</h1>
+<h2>Welcome, <?php echo htmlspecialchars($userDetails->username); ?></h2>
 
-<head>
-    <title>Dashboard</title>
-    <link rel="stylesheet" type="text/css" href="css/styles.css">
-</head>
-
-<body>
-    <h1>Dashboard</h1>
-    <h2>Welcome, <?php echo htmlspecialchars($userDetails->username); ?></h2>
-
-    <h3>Your Blogs</h3>
-    <?php foreach ($userBlogs as $blog) : ?>
-        <div class="blog">
-            <h4><?php echo htmlspecialchars($blog->title); ?></h4>
-            <p><?php echo htmlspecialchars($blog->content); ?></p>
-            <form action="edit_blog.php" method="get" style="display:inline;">
+<h3>Your Blogs</h3>
+<?php foreach ($userBlogs as $blog) : ?>
+    <div class="card mb-3">
+        <div class="card-body">
+            <h5 class="card-title"><?php echo htmlspecialchars($blog->title); ?></h5>
+            <p class="card-text"><?php echo htmlspecialchars($blog->content); ?></p>
+            <form action="edit_blog.php" method="get" class="d-inline">
                 <input type="hidden" name="blog_id" value="<?php echo $blog->id; ?>">
-                <input type="submit" value="Edit">
+                <button type="submit" class="btn btn-primary">Edit</button>
             </form>
-            <form action="dashboard.php" method="post" style="display:inline;">
+            <form action="dashboard.php" method="post" class="d-inline">
                 <input type="hidden" name="blog_id" value="<?php echo $blog->id; ?>">
-                <input type="submit" name="delete_blog" value="Delete">
+                <button type="submit" name="delete_blog" class="btn btn-danger">Delete</button>
             </form>
         </div>
-    <?php endforeach; ?>
+    </div>
+<?php endforeach; ?>
 
-    <h3>Edit Your Account</h3>
-    <form action="dashboard.php" method="post">
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" value="<?php echo htmlspecialchars($userDetails->username); ?>" required><br><br>
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" value="<?php echo htmlspecialchars($userDetails->email); ?>" required><br><br>
-        <input type="submit" name="edit_user" value="Update Account">
-    </form>
-    <form action="dashboard.php" method="post">
-        <input type="submit" name="delete_user" value="Delete Account" onclick="return confirm('Are you sure you want to delete your account? This action cannot be undone.');">
-    </form>
-</body>
-
-</html>
+<h3>Edit Your Account</h3>
+<form action="dashboard.php" method="post">
+    <div class="mb-3">
+        <label for="username" class="form-label">Username:</label>
+        <input type="text" class="form-control" id="username" name="username" value="<?php echo htmlspecialchars($userDetails->username); ?>" required>
+    </div>
+    <div class="mb-3">
+        <label for="email" class="form-label">Email:</label>
+        <input type="email" class="form-control" id="email" name="email" value="<?php echo htmlspecialchars($userDetails->email); ?>" required>
+    </div>
+    <button type="submit" name="edit_user" class="btn btn-primary">Update Account</button>
+</form>
+<form action="dashboard.php" method="post" class="mt-3">
+    <button type="submit" name="delete_user" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete your account? This action cannot be undone.');">Delete Account</button>
+</form>
+<?php include 'includes/footer.php'; ?>

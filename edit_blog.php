@@ -8,6 +8,7 @@ redirectIfNotSet('id', 'index.php');
 
 $blog = new Blog();
 
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $blogId = $_POST['blog_id'];
     $title = $_POST['title'];

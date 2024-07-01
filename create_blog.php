@@ -14,6 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $blog = new Blog();
     if ($blog->createBlog($userId, $title, $content)) {
         $message = "Blog post created successfully.";
+        header("Location: index.php");
     } else {
         $message = "Failed to create blog post. Please try again.";
     }
