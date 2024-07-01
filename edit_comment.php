@@ -4,10 +4,7 @@ error_reporting(E_ALL);
 ini_set('display_errors', 1);
 require_once 'core/autoload.php';
 
-if (!isset($_SESSION['user_id'])) {
-    header("Location: login.php");
-    exit();
-}
+redirectIfNotSet('id', 'index.php');
 
 $comment = new Comment();
 

@@ -8,10 +8,7 @@ require_once 'core/autoload.php';
 $blog = new Blog();
 $comment = new Comment();
 
-if (!isset($_GET['id'])) {
-    header("Location: index.php");
-    exit();
-}
+redirectIfNotSet('id', 'index.php');
 
 $blogId = $_GET['id'];
 $blogDetails = $blog->getBlogById($blogId);
