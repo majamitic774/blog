@@ -1,6 +1,6 @@
 <?php include 'includes/header.php'; ?>
 
-<div class="jumbotron jumbotron-fluid" style="background-color: #1a5aaa; color: white; margin-bottom: 0;">
+<div class="" style="background-color: #1a5aaa; color: white; margin-bottom: 0;">
     <div class="container text-center">
         <h1 class="display-4 w-100">Welcome to Maja's Blog</h1>
         <p class="lead">Explore and share your thoughts with the world</p>

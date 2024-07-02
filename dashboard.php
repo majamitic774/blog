@@ -2,7 +2,7 @@
 session_start();
 require_once 'core/autoload.php';
 
-redirectIfNotSet('id', 'index.php');
+redirectIfNotLoggedIn();
 
 $userId = $_SESSION['user_id'];
 $blog = new Blog();

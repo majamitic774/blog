@@ -4,7 +4,7 @@ error_reporting(E_ALL);
 ini_set('display_errors', 1);
 require_once 'core/autoload.php';
 
-redirectIfNotSet('id', 'index.php');
+redirectIfNotLoggedIn();
 
 $blog = new Blog();
 
