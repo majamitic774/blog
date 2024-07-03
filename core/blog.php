@@ -14,9 +14,9 @@ class Blog
     public function getAllBlogs()
     {
         $stmt = $this->conn->prepare("SELECT blogs.id, blogs.title, blogs.content, users.username, blogs.created_at
-    FROM blogs
-    JOIN users ON blogs.user_id = users.id
-    ORDER BY blogs.created_at DESC");
+                                      FROM blogs
+                                      JOIN users ON blogs.user_id = users.id
+                                      ORDER BY blogs.created_at DESC");
         $stmt->execute();
         return $stmt->fetchAll();
     }

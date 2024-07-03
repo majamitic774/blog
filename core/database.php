@@ -5,9 +5,10 @@ class Database
     private static $instance = null;
     private $conn;
 
+    // TODO: Move to .env
     private $host = 'localhost';
     private $user = 'root';
-    private $pass = 'dunima';
+    private $pass = '';
     private $name = 'blog';
 
     private function __construct()
