@@ -1,0 +1,33 @@
+body {
+    font-family: sans-serif;
+}
+
+.header {
+    background: #1a5aaa;
+    color: white;
+}
+
+.hero {
+    height: 300px;
+    background: #1a5aaa;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-content {
+    text-align: center;
+}
+
+.hero h1 {
+    font-weight: 800;
+}
+
+.read-more-btn {
+    background-color: #FCAA67;
+}
+
+.read-more-btn:hover {
+    background-color: #ec954e;
+}

@@ -1,9 +1,13 @@
-<?php include 'includes/header.php'; ?>
+<?php
+include 'includes/header.php';
+?>
+
 <div class="jumbotron jumbotron-fluid" style="background-color: #1a5aaa; color: white; margin-bottom: 0;">
     <div class="container text-center">
         <h1 class="display-4">Edit Blog Post</h1>
     </div>
 </div>
+
 <div class="container my-5">
     <div class="row justify-content-center">
         <div class="col-md-6">
@@ -22,4 +26,7 @@
         </div>
     </div>
 </div>
-<?php include 'includes/footer.php'; ?>
+
+<?php
+include 'includes/footer.php';
+?>

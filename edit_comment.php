@@ -1,13 +1,10 @@
 <?php
 session_start();
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
 require_once 'core/autoload.php';
 
 redirectIfNotLoggedIn();
 
 $comment = new Comment();
-
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $commentId = $_POST['comment_id'];

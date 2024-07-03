@@ -1,9 +1,13 @@
-<?php include 'includes/header.php'; ?>
-<div class="jumbotron jumbotron-fluid" style="background-color: #1a5aaa; color: white; margin-bottom: 0;">
+<?php
+include 'includes/header.php';
+?>
+
+<div class="jumbotron jumbotron-fluid mt-5">
     <div class="container text-center">
         <h1 class="display-4">Login</h1>
     </div>
 </div>
+
 <div class="container my-5">
     <div class="row justify-content-center">
         <div class="col-md-6">
@@ -20,10 +24,13 @@
                     <input type="password" class="form-control" id="password" name="password" required>
                 </div>
                 <div class="text-center">
-                    <button type="submit" class="btn btn-primary" style="background-color: #1a5aaa; border-color: #1a5aaa; width: 150px;">Login</button>
+                    <button type="submit" class="btn read-more-btn">Login</button>
                 </div>
             </form>
         </div>
     </div>
 </div>
-<?php include 'includes/footer.php'; ?>
+
+<?php
+include 'includes/footer.php';
+?>

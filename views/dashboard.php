@@ -1,8 +1,10 @@
-<?php include 'includes/header.php'; ?>
+<?php
+include 'includes/header.php';
+?>
 
-<div class="jumbotron jumbotron-fluid" style="background-color: #1a5aaa;">
+<div class="jumbotron jumbotron-fluid mt-5">
     <div class="container text-center">
-        <h1 class="display-4 text-white">Your Blogs</h1>
+        <h1 class="display-4">Your Blogs</h1>
     </div>
 </div>
 
@@ -19,17 +21,17 @@
                                         <?php echo htmlspecialchars($blog->title); ?>
                                     </a>
                                 </h5>
-                                <p class="card-text">Posted by <?php echo htmlspecialchars($blog->username); ?> on <?php echo $blog->created_at; ?></p>
+                                <p class="card-text">Posted by <?php echo htmlspecialchars($userDetails->username); ?> on <?php echo $blog->created_at; ?></p>
                                 <p class="card-text"><?php echo htmlspecialchars(substr($blog->content, 0, 100)); ?>...</p>
                             </div>
                             <div class="card-footer bg-white text-right">
                                 <form action="edit_blog.php" method="get" class="d-inline">
                                     <input type="hidden" name="blog_id" value="<?php echo $blog->id; ?>">
-                                    <button type="submit" class="btn btn-primary btn-sm" style="background-color: #1a5aaa; border-color: #1a5aaa;">Edit</button>
+                                    <button type="submit" class="btn read-more-btn">Edit</button>
                                 </form>
                                 <form action="dashboard.php" method="post" class="d-inline">
                                     <input type="hidden" name="blog_id" value="<?php echo $blog->id; ?>">
-                                    <button type="submit" name="delete_blog" class="btn btn-danger btn-sm">Delete</button>
+                                    <button type="submit" name="delete_blog" class="btn btn-danger">Delete</button>
                                 </form>
                             </div>
                         </div>
@@ -51,8 +53,8 @@
                             <label for="email" class="form-label">Email:</label>
                             <input type="email" class="form-control" id="email" name="email" value="<?php echo htmlspecialchars($userDetails->email); ?>" required>
                         </div>
-                        <div class="d-flex justify-content-between">
-                            <button type="submit" name="edit_user" class="btn btn-primary" style="background-color: #1a5aaa; border-color: #1a5aaa;">Update Account</button>
+                        <div>
+                            <button type="submit" name="edit_user" class="btn read-more-btn">Update Account</button>
                             <button type="submit" name="delete_user" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete your account? This action cannot be undone.');">Delete Account</button>
                         </div>
                     </form>
@@ -62,4 +64,6 @@
     </div>
 </div>
 
-<?php include 'includes/footer.php'; ?>
+<?php
+include 'includes/footer.php';
+?>

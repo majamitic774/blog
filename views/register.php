@@ -1,9 +1,13 @@
-<?php include 'includes/header.php'; ?>
-<div class="jumbotron jumbotron-fluid" style="background-color: #1a5aaa; color: white; margin-bottom: 0;">
+<?php
+include 'includes/header.php';
+?>
+
+<div class="jumbotron jumbotron-fluid mt-5">
     <div class="container text-center">
         <h1 class="display-4">Register</h1>
     </div>
 </div>
+
 <div class="container my-5">
     <div class="row justify-content-center">
         <div class="col-md-6">
@@ -24,10 +28,13 @@
                     <input type="email" class="form-control" id="email" name="email" required>
                 </div>
                 <div class="text-center">
-                    <button type="submit" class="btn btn-primary" style="background-color: #1a5aaa; border-color: #1a5aaa; width: 150px;">Register</button>
+                    <button type="submit" class="btn read-more-btn">Register</button>
                 </div>
             </form>
         </div>
     </div>
 </div>
-<?php include 'includes/footer.php'; ?>
+
+<?php
+include 'includes/footer.php';
+?>

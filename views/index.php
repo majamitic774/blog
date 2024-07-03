@@ -1,22 +1,21 @@
-<?php include 'includes/header.php'; ?>
+<?php
+include 'includes/header.php';
+?>
 
-<div class="" style="background-color: #1a5aaa; color: white; margin-bottom: 0;">
-    <div class="container text-center">
-        <h1 class="display-4 w-100">Welcome to Maja's Blog</h1>
-        <p class="lead">Explore and share your thoughts with the world</p>
-
-
+<div class="hero mb-5">
+    <div class="container hero-content text-center">
+        <h1 class="display-4 w-100">Share your ideas with the world</h1>
+        <p class="lead">Make an account and start writing your blog in just few minutes!</p>
     </div>
 </div>
 
-<!-- Search Bar -->
-<div class="input-group mb-3 w-75 mx-auto">
-    <input type="text" class="form-control" placeholder="Search" aria-label="Search" aria-describedby="button-search" id="search-input">
+<div class="input-group mb-3 w-50 mx-auto">
+    <input type="search" class="form-control" aria-label="Search" aria-describedby="button-search" id="search-input">
     <div class="input-group-append">
         <button class="btn btn-outline-dark" type="button" id="button-search" style="border-color: blue;">Search</button>
     </div>
 </div>
-<!-- End of Search Bar -->
+
 <div class="container" id="blogs-container">
     <div class="row">
         <?php foreach ($blogs as $blog) : ?>
@@ -32,7 +31,7 @@
                         <p class="card-text"><?php echo htmlspecialchars(substr($blog->content, 0, 100)); ?>...</p>
                     </div>
                     <div class="card-footer bg-white text-right">
-                        <a href="single_blog.php?id=<?php echo $blog->id; ?>" class="btn btn-primary" style="background-color: #1a5aaa; border-color: #1a5aaa;">Read More</a>
+                        <a href="single_blog.php?id=<?php echo $blog->id; ?>" class="btn read-more-btn">Read More</a>
                     </div>
                 </div>
             </div>
@@ -40,7 +39,9 @@
     </div>
 </div>
 
-<?php include 'includes/footer.php'; ?>
+<?php
+include 'includes/footer.php';
+?>
 
 <script>
     document.getElementById('search-input').addEventListener('input', function(e) {

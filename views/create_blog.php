@@ -1,9 +1,13 @@
-<?php include 'includes/header.php'; ?>
-<div class="jumbotron jumbotron-fluid" style="background-color: #1a5aaa; color: white; margin-bottom: 0;">
+<?php
+include 'includes/header.php';
+?>
+
+<div class="jumbotron jumbotron-fluid mt-5">
     <div class="container text-center">
-        <h1 class="display-4">Create Blog Post</h1>
+        <h1 class="display-4">Create Post</h1>
     </div>
 </div>
+
 <div class="container my-5">
     <div class="row justify-content-center">
         <div class="col-md-6">
@@ -20,10 +24,13 @@
                     <textarea class="form-control" id="content" name="content" rows="5" required></textarea>
                 </div>
                 <div class="text-center">
-                    <button type="submit" class="btn btn-primary" style="background-color: #1a5aaa; border-color: #1a5aaa; width: 150px;">Create Post</button>
+                    <button type="submit" class="btn read-more-btn">Create Post</button>
                 </div>
             </form>
         </div>
     </div>
 </div>
-<?php include 'includes/footer.php'; ?>
+
+<?php
+include 'includes/footer.php';
+?>
